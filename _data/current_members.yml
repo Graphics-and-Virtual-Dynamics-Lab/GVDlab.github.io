@@ -1,24 +1,72 @@
-- name: Ridwanur Sardar
-  photo: rsarder.jpg
-  info: MSc, started in June 2024 (Rutgers University)
-  email: rrs148@scarletmail.rutgers.edu 
-  number_educ: 1
-  education1: Co-supervision <a href="https://www.cs.rutgers.edu/people/professors/details/mubbasir-kapadia">Prof. Mubbasir Kapadia</a> and Prof. Muhammad Usman
-  education2: 
 
-- name: William Chandler
-  photo: rchandler.jpg
-  info: MSc, started in June 2024 (Rutgers University)
-  email: wcc44@scarletmail.rutgers.edu 
-  number_educ: 1
-  education1: Co-supervision <a href="https://www.cs.rutgers.edu/people/professors/details/mubbasir-kapadia">Prof. Mubbasir Kapadia</a> and Prof. Muhammad Usman
-  education2: 
+# ==========================================
+# PhD STUDENTS
+# ==========================================
 
 - name: Muhammad Furqan Khan
+  category: PhD
   photo: mfurqan.jpg
   info: PhD in Computer Science (Ontario Tech University)
   email:
   number_educ: 1
   education1: "Supervisor: Dr. Muhammad Usman (Assistant Professor)"
-  education2: "Research: Personality-Aware Social Crowd Simulation Using Multi-Perception Reinforcement Learning"
-  education3: "Research: Human-in-the-Loop Virtual Reality for Personality-Driven Crowd Behavior and Human-Agent Interaction"
+  supervisors:
+    - "Dr. Muhammad Usman"
+  projects:
+    - title: "Personality-Aware Social Crowd Simulation Using Multi-Perception Reinforcement Learning"
+      status: current
+    - title: "Human-in-the-Loop Virtual Reality for Personality-Driven Crowd Behavior and Human-Agent Interaction"
+      status: current
+
+# ==========================================
+# MASTERS STUDENTS
+# ==========================================
+
+- name: M. Hamza Noor
+  category: Masters
+  photo: hamza_noor.jpg
+  info: Masters in Computer Science
+  email:
+  number_educ: 1
+  education1: "Supervisor: Dr. Muhammad Usman"
+  supervisors:
+    - "Dr. Muhammad Usman"
+  projects:
+    - title: "Realistic Trail Following Behavior in a Dynamically Deformable Terrain Using Terrain-Based Penalty Fields"
+      status: previous
+
+- name: Oluwasenun Emmanuel Alagbe
+  category: Masters
+  photo: alagbe.jpg
+  info: Masters in Computer Science
+  email:
+  number_educ: 1
+  education1: "Supervisors: Prof. Muhammad Usman and Prof. Annie En-Shiun Lee"
+  supervisors:
+    - "Prof. Muhammad Usman"
+    - "Prof. Annie En-Shiun Lee"
+  projects:
+    - title: "Adapting speech driven 3D faces to low resource languages under weak lip supervision"
+      status: current
+
+# ==========================================
+# UNDERGRAD STUDENTS
+# ==========================================
+
+- name: Tomasz Puzio
+  category: Undergrad
+  photo: tomasz_puzio.jpg
+  info: BSc Computer Science (Honours)
+  email:
+  number_educ: 1
+  education1: "Supervisor: Dr. Muhammad Usman"
+  supervisors:
+    - "Dr. Muhammad Usman"
+  projects:
+    - title: "InteractionAtlas: Visualizing Invisible Interactions in Pedestrian Trajectory Data"
+      status: current
+
+# ==========================================
+# VISITING STUDENTS
+# ==========================================
+# No visiting students submitted yet.

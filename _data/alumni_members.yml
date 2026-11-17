@@ -72,3 +72,19 @@
   education2: 
   education3: 
   education4: 
+
+- name: Ridwanur Sardar
+  photo: rsarder.jpg
+  info: MSc, started in June 2024 (Rutgers University)
+  email: rrs148@scarletmail.rutgers.edu 
+  number_educ: 1
+  education1: Co-supervision <a href="https://www.cs.rutgers.edu/people/professors/details/mubbasir-kapadia">Prof. Mubbasir Kapadia</a> and Prof. Muhammad Usman
+  education2: 
+
+- name: William Chandler
+  photo: rchandler.jpg
+  info: MSc, started in June 2024 (Rutgers University)
+  email: wcc44@scarletmail.rutgers.edu 
+  number_educ: 1
+  education1: Co-supervision <a href="https://www.cs.rutgers.edu/people/professors/details/mubbasir-kapadia">Prof. Mubbasir Kapadia</a> and Prof. Muhammad Usman
+  education2: 
