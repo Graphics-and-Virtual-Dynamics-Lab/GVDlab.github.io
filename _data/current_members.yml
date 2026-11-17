@@ -24,7 +24,7 @@
 
 - name: M. Hamza Noor
   category: Masters
-  photo: hamza_noor.jpg
+  photo: HNoor.jpg
   info: Masters in Computer Science
   email:
   number_educ: 1
@@ -37,7 +37,7 @@
 
 - name: Oluwasenun Emmanuel Alagbe
   category: Masters
-  photo: alagbe.jpg
+  photo: OAlagbe.jpg
   info: Masters in Computer Science
   email:
   number_educ: 1
@@ -55,7 +55,7 @@
 
 - name: Tomasz Puzio
   category: Undergrad
-  photo: tomasz_puzio.jpg
+  photo: TPuzio.jpg
   info: BSc Computer Science (Honours)
   email:
   number_educ: 1
