@@ -1,4 +1,3 @@
-
 ---
 title: "GVD Lab - Team"
 layout: gridlay
