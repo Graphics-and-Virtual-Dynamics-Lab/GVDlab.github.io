@@ -2,11 +2,976 @@
 layout: default
 ---
 
-  <div id="homeid" class="col-sm-8">
-        <h1>Graphics and Virtual Dynamics Lab</h1>
+<style>
+/* GVD LAB — MODERN HOMEPAGE */
+/* Scoped to homepage to avoid affecting the Team page */
 
-	{{ content }}
+.gvd-home {
+  --gvd-ink: #0d1930;
+  --gvd-ink-2: #152845;
+  --gvd-teal: #39d4cd;
+  --gvd-blue: #78a6ff;
+  --gvd-text: #192c46;
+  --gvd-muted: #5f728a;
+  --gvd-border: #dfe8f0;
+  --gvd-bg: #f6f9fc;
+  color: var(--gvd-text);
+  font-family: inherit;
+}
+
+.gvd-home * {
+  box-sizing: border-box;
+}
+
+.gvd-home a {
+  text-decoration: none;
+}
+
+/* HERO */
+
+.gvd-home .gvd-hero {
+  background:
+    radial-gradient(circle at 78% 20%, rgba(57,212,205,.17), transparent 33%),
+    radial-gradient(circle at 24% 10%, rgba(120,166,255,.16), transparent 40%),
+    linear-gradient(135deg, #0b1529 0%, #102441 65%, #142f4c 100%);
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  margin: 18px 0 32px;
+  padding: clamp(26px, 5vw, 68px);
+  box-shadow: 0 18px 45px rgba(15,35,64,.15);
+}
+
+.gvd-home .gvd-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0,1.05fr) minmax(0,.95fr);
+  gap: 32px;
+  align-items: center;
+}
+
+.gvd-home .gvd-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: .17em;
+  font-weight: 750;
+  font-size: 11px;
+  color: #89ebe5;
+  margin: 0 0 15px;
+}
+
+.gvd-home h1 {
+  color: #fff;
+  font-size: clamp(35px, 4.15vw, 58px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -.045em;
+  margin: 0 0 20px;
+}
+
+.gvd-home h1 span {
+  color: #75e8e0;
+}
+
+.gvd-home .gvd-lede {
+  color: #d5e3f0;
+  font-size: clamp(15px, 1.5vw, 18px);
+  line-height: 1.76;
+  max-width: 570px;
+  margin: 0 0 23px;
+}
+
+/* BUTTONS */
+
+.gvd-home .gvd-hero-actions,
+.gvd-home .gvd-button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.gvd-home .gvd-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid transparent;
+  border-radius: 11px;
+  padding: 12px 18px;
+  font-weight: 750;
+  font-size: 14px;
+  line-height: 1.3;
+  color: #071c27;
+  background: #61e3dc;
+  transition:
+    transform .2s ease,
+    background .2s ease,
+    box-shadow .2s ease;
+}
+
+.gvd-home .gvd-btn:hover,
+.gvd-home .gvd-btn:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,.18);
+  color: #071c27;
+  text-decoration: none;
+}
+
+.gvd-home .gvd-btn-secondary {
+  background: rgba(255,255,255,.07);
+  color: #f2f7fd;
+  border-color: rgba(255,255,255,.22);
+}
+
+.gvd-home .gvd-btn-secondary:hover,
+.gvd-home .gvd-btn-secondary:focus {
+  background: rgba(255,255,255,.14);
+  color: #fff;
+}
+
+.gvd-home .gvd-hero-note {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 28px;
+  color: #a9c8df;
+  font-size: 12px;
+}
+
+.gvd-home .gvd-hero-note span:before {
+  content: '•';
+  color: #54dfd7;
+  margin-right: 8px;
+}
+
+/* INTERACTIVE SIMULATION */
+
+.gvd-home .gvd-sim-shell {
+  background: linear-gradient(
+    150deg,
+    rgba(5,14,29,.65),
+    rgba(23,52,76,.6)
+  );
+  border: 1px solid rgba(148,204,233,.23);
+  border-radius: 19px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,.2);
+}
+
+.gvd-home .gvd-sim-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 15px;
+  color: #d9f5f6;
+  font-size: 12px;
+  font-weight: 700;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.gvd-home .gvd-live {
+  font-size: 10px;
+  color: #8ff1d8;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.gvd-home .gvd-live:before {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #54e2b8;
+  margin-right: 6px;
+}
+
+.gvd-home #gvd-crowd-canvas {
+  display: block;
+  width: 100%;
+  height: 270px;
+  background: #0a1d35;
+}
+
+.gvd-home .gvd-sim-bottom {
+  padding: 11px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  color: #a6c1d6;
+  font-size: 11px;
+}
+
+.gvd-home .gvd-pause {
+  color: #dbf6f5;
+  background: transparent;
+  border: 1px solid rgba(195,239,238,.25);
+  border-radius: 7px;
+  padding: 5px 9px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.gvd-home .gvd-pause:hover {
+  background: rgba(255,255,255,.1);
+}
+
+/* PAGE SECTIONS */
+
+.gvd-home .gvd-section {
+  margin: 35px 0 43px;
+}
+
+.gvd-home .gvd-kicker {
+  margin: 0 0 7px;
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #007e88;
+  font-weight: 800;
+}
+
+.gvd-home .gvd-section h2 {
+  margin: 0 0 14px;
+  color: var(--gvd-ink);
+  font-size: clamp(25px, 2.6vw, 34px);
+  font-weight: 800;
+  letter-spacing: -.025em;
+}
+
+.gvd-home .gvd-section-lead {
+  color: var(--gvd-muted);
+  line-height: 1.75;
+  font-size: 15px;
+  max-width: 790px;
+  margin: 0 0 20px;
+}
+
+/* ABOUT */
+
+.gvd-home .gvd-about {
+  padding: 25px 28px;
+  border: 1px solid var(--gvd-border);
+  border-radius: 17px;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(15,35,64,.035);
+  line-height: 1.9;
+  font-size: 15px;
+}
+
+.gvd-home .gvd-about p:last-child {
+  margin-bottom: 0;
+}
+
+/* RESEARCH CARDS */
+
+.gvd-home .gvd-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4,minmax(0,1fr));
+  gap: 15px;
+}
+
+.gvd-home .gvd-card {
+  border: 1px solid var(--gvd-border);
+  background: #fff;
+  border-radius: 16px;
+  padding: 21px 18px;
+  min-height: 185px;
+  box-shadow: 0 5px 20px rgba(15,35,64,.04);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.gvd-home .gvd-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 28px rgba(15,35,64,.1);
+}
+
+.gvd-home .gvd-card-symbol {
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  color: #057b86;
+  background: #dff9f6;
+  margin-bottom: 16px;
+  font-size: 17px;
+}
+
+.gvd-home .gvd-card h3 {
+  font-size: 16px;
+  font-weight: 800;
+  color: #152c48;
+  margin: 0 0 8px;
+}
+
+.gvd-home .gvd-card p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #64778a;
+  margin: 0;
+}
+
+/* RESEARCH IMAGE GALLERY */
+
+.gvd-home .gvd-gallery {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr 1fr;
+  grid-auto-rows: 150px;
+  gap: 12px;
+}
+
+.gvd-home .gvd-gallery figure {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 15px;
+  background: #1d3a56;
+}
+
+.gvd-home .gvd-gallery figure:first-child {
+  grid-row: span 2;
+}
+
+.gvd-home .gvd-gallery img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .35s ease;
+}
+
+.gvd-home .gvd-gallery figure:hover img {
+  transform: scale(1.055);
+}
+
+.gvd-home .gvd-gallery figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 13px 12px;
+  color: #fff;
+  background: linear-gradient(
+    transparent,
+    rgba(0,0,0,.7)
+  );
+  font-size: 12px;
+  font-weight: 750;
+}
+
+/* NEWS */
+
+.gvd-home .gvd-news-card {
+  background: linear-gradient(180deg,#fff,#f8fbfe);
+  padding: 22px 22px 16px;
+  border: 1px solid var(--gvd-border);
+  border-radius: 17px;
+  box-shadow: 0 5px 20px rgba(15,35,64,.04);
+  overflow-wrap: anywhere;
+}
+
+.gvd-home .gvd-news-card h2,
+.gvd-home .gvd-news-card h3 {
+  color: #17354f;
+}
+
+.gvd-home .gvd-news-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.gvd-home .gvd-news-card ul {
+  padding-left: 20px;
+}
+
+/* JOIN THE LAB */
+
+.gvd-home .gvd-bottom-cta {
+  margin: 28px 0 33px;
+  padding: 24px 27px;
+  border-radius: 17px;
+  background: linear-gradient(105deg,#103451,#146173);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 22px;
+  color: #fff;
+}
+
+.gvd-home .gvd-bottom-cta h2 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 800;
+  margin: 0 0 5px;
+}
+
+.gvd-home .gvd-bottom-cta p {
+  color: #d5e7ea;
+  margin: 0;
+  font-size: 14px;
+}
+
+/* LOGOS */
+
+.gvd-home .gvd-credits {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  padding: 15px 0 30px;
+  border-top: 1px solid var(--gvd-border);
+}
+
+.gvd-home .gvd-credits img {
+  object-fit: contain;
+  max-height: 55px;
+  max-width: 210px;
+  width: auto;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:1100px) {
+  .gvd-home .gvd-card-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+
+  .gvd-home .gvd-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gvd-home #gvd-crowd-canvas {
+    height: 220px;
+  }
+}
+
+@media (max-width:650px) {
+  .gvd-home .gvd-hero {
+    padding: 27px 20px;
+    border-radius: 18px;
+  }
+
+  .gvd-home .gvd-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gvd-home .gvd-gallery {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 120px;
+  }
+
+  .gvd-home .gvd-gallery figure:first-child {
+    grid-column: span 2;
+    grid-row: span 1;
+    height: 180px;
+  }
+
+  .gvd-home .gvd-about {
+    padding: 18px;
+  }
+
+  .gvd-home .gvd-bottom-cta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .gvd-home .gvd-hero-note {
+    gap: 8px 15px;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .gvd-home .gvd-card,
+  .gvd-home .gvd-btn,
+  .gvd-home .gvd-gallery img {
+    transition: none !important;
+  }
+
+  .gvd-home .gvd-card:hover,
+  .gvd-home .gvd-btn:hover {
+    transform: none !important;
+  }
+}
+</style>
+
+<main class="gvd-home" id="gvd-home">
+
+  <!-- HERO -->
+  <section class="gvd-hero" aria-labelledby="gvd-hero-title">
+    <div class="gvd-hero-grid">
+
+      <div>
+        <p class="gvd-eyebrow">
+          Ontario Tech University · Faculty of Science
+        </p>
+
+        <h1 id="gvd-hero-title">
+          Graphics &amp;<br>
+          <span>Virtual Dynamics</span> Lab
+        </h1>
+
+        <p class="gvd-lede">
+          Advancing human-centered simulation through
+          intelligent virtual characters, immersive
+          environments, and data-driven crowd dynamics.
+        </p>
+
+        <div class="gvd-hero-actions">
+          <a class="gvd-btn" href="{{ '/research/' | relative_url }}">
+            Explore our research
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <a class="gvd-btn gvd-btn-secondary"
+             href="{{ '/team/' | relative_url }}">
+            Meet the team
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <div class="gvd-hero-note">
+          <span>Crowd simulation</span>
+          <span>Virtual reality</span>
+          <span>Digital twins</span>
+        </div>
+      </div>
+
+      <!-- ANIMATED CROWD -->
+      <div class="gvd-sim-shell">
+        <div class="gvd-sim-top">
+          <span>Human-centered navigation</span>
+          <span class="gvd-live">Interactive concept</span>
+        </div>
+
+        <canvas
+          id="gvd-crowd-canvas"
+          role="img"
+          aria-label="Illustrative animation of simulated pedestrians navigating around obstacles toward a destination.">
+        </canvas>
+
+        <div class="gvd-sim-bottom">
+          <span>Illustrative visualization — not a research result</span>
+          <button
+            class="gvd-pause"
+            id="gvd-sim-toggle"
+            type="button"
+            aria-pressed="false">
+            Pause motion
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="gvd-section" aria-labelledby="gvd-about-title">
+    <p class="gvd-kicker">About the lab</p>
+    <h2 id="gvd-about-title">
+      Where simulation meets human experience.
+    </h2>
+
+    <div class="gvd-about">
+      {{ content }}
+    </div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section class="gvd-section" aria-labelledby="gvd-research-title">
+
+    <p class="gvd-kicker">Research pillars</p>
+    <h2 id="gvd-research-title">
+      Research that moves worlds forward.
+    </h2>
+
+    <p class="gvd-section-lead">
+      Exploring believable human behavior and responsive
+      virtual environments, from fundamental models to
+      practical interactive experiences.
+    </p>
+
+    <div class="gvd-card-grid">
+
+      <article class="gvd-card">
+        <div class="gvd-card-symbol" aria-hidden="true">◎</div>
+        <h3>Crowd simulation</h3>
+        <p>
+          Modeling interactions, movement, and collective
+          behavior in complex environments.
+        </p>
+      </article>
+
+      <article class="gvd-card">
+        <div class="gvd-card-symbol" aria-hidden="true">⌁</div>
+        <h3>Virtual reality</h3>
+        <p>
+          Studying embodied interaction and perception in
+          immersive shared spaces.
+        </p>
+      </article>
+
+      <article class="gvd-card">
+        <div class="gvd-card-symbol" aria-hidden="true">▦</div>
+        <h3>Digital twins</h3>
+        <p>
+          Using virtual environments to explore human-centered
+          design and navigation.
+        </p>
+      </article>
+
+      <article class="gvd-card">
+        <div class="gvd-card-symbol" aria-hidden="true">✧</div>
+        <h3>Interactive worlds</h3>
+        <p>
+          Developing virtual characters and serious games
+          with realistic social behaviors.
+        </p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- RESEARCH GALLERY -->
+  <section class="gvd-section" aria-labelledby="gvd-gallery-title">
+
+    <p class="gvd-kicker">From the lab</p>
+    <h2 id="gvd-gallery-title">Research in motion.</h2>
+
+    <p class="gvd-section-lead">
+      Selected imagery from the lab's existing research gallery.
+    </p>
+
+    <div class="gvd-gallery">
+
+      <figure>
+        <img
+          src="{{ '/images/sliderpic/lab-slider-3.jpg' | relative_url }}"
+          alt="Research visualization from GVD Lab"
+          loading="lazy">
+        <figcaption>
+          Visualizing complex environments
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="{{ '/images/sliderpic/lab-slider-1.png' | relative_url }}"
+          alt="GVD Lab research gallery image"
+          loading="lazy">
+        <figcaption>Research explorations</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="{{ '/images/sliderpic/lab-slider-2.jpg' | relative_url }}"
+          alt="GVD Lab research gallery image"
+          loading="lazy">
+        <figcaption>Virtual environments</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="{{ '/images/sliderpic/lab-slider-17.jpg' | relative_url }}"
+          alt="GVD Lab research gallery image"
+          loading="lazy">
+        <figcaption>Simulation studies</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="{{ '/images/sliderpic/lab-slider-18.jpg' | relative_url }}"
+          alt="GVD Lab research gallery image"
+          loading="lazy">
+        <figcaption>Human-centered research</figcaption>
+      </figure>
+
+    </div>
+  </section>
+
+  <!-- NEWS -->
+  <section class="gvd-section" aria-labelledby="gvd-news-title">
+    <p class="gvd-kicker">Latest from GVD Lab</p>
+    <h2 id="gvd-news-title">News &amp; updates.</h2>
+
+    <div class="gvd-news-card" id="newsid">
+      {% include news.html %}
+    </div>
+  </section>
+
+  <!-- JOIN THE LAB -->
+  <section class="gvd-bottom-cta" aria-label="Join GVD Lab">
+
+    <div>
+      <h2>Build what comes next.</h2>
+      <p>
+        Interested in research at the intersection of people,
+        simulations, and virtual worlds?
+      </p>
+    </div>
+
+    <a class="gvd-btn" href="{{ '/open-positions/' | relative_url }}">
+      Explore openings
+      <span aria-hidden="true">→</span>
+    </a>
+
+  </section>
+
+  <!-- PARTNER LOGOS -->
+  <div class="gvd-credits">
+    <img
+      src="{{ '/images/logopic/lab-logo-withName.png' | relative_url }}"
+      alt="Graphics and Virtual Dynamics Lab logo"
+      loading="lazy">
+
+    <img
+      src="{{ '/images/logopic/otu-logo.png' | relative_url }}"
+      alt="Ontario Tech University logo"
+      loading="lazy">
   </div>
-  <div id="newsid" class="col-sm-4" >
-	{% include news.html %}
-  </div>
+
+</main>
+
+<!-- CROWD SIMULATION SCRIPT -->
+<script>
+(function () {
+  'use strict';
+
+  var canvas = document.getElementById('gvd-crowd-canvas');
+  var toggle = document.getElementById('gvd-sim-toggle');
+
+  if (!canvas || !toggle || !canvas.getContext) return;
+
+  var ctx = canvas.getContext('2d');
+  if (!ctx) return;
+
+  var media = window.matchMedia
+    ? window.matchMedia('(prefers-reduced-motion: reduce)')
+    : null;
+
+  var reduced = !!(media && media.matches);
+
+  var running = !reduced;
+  var visible = true;
+  var frame = 0;
+  var agents = [];
+  var w = 400;
+  var h = 270;
+  var raf = 0;
+
+  var seed = 37;
+
+  function rand() {
+    seed = (seed * 1664525 + 1013904223) >>> 0;
+    return seed / 4294967296;
+  }
+
+  function init() {
+    agents = [];
+
+    for (var i = 0; i < 42; i++) {
+      agents.push({
+        x: 18 + rand() * .48 * w,
+        y: 18 + rand() * (h - 36),
+        speed: .36 + rand() * .48,
+        phase: rand() * 6.28,
+        tint: i % 6 === 0 ? '#92d6ff' : '#5be0d1'
+      });
+    }
+  }
+
+  function size() {
+    var rect = canvas.getBoundingClientRect();
+
+    w = Math.max(200, Math.round(rect.width));
+    h = Math.max(160, Math.round(rect.height));
+
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+    canvas.width = Math.round(w * dpr);
+    canvas.height = Math.round(h * dpr);
+
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    init();
+    draw();
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, w, h);
+
+    ctx.fillStyle = '#0a1d35';
+    ctx.fillRect(0, 0, w, h);
+
+    // Background grid
+    ctx.strokeStyle = 'rgba(109,166,194,.11)';
+    ctx.lineWidth = 1;
+
+    for (var gx = 0; gx < w; gx += 23) {
+      ctx.beginPath();
+      ctx.moveTo(gx, 0);
+      ctx.lineTo(gx, h);
+      ctx.stroke();
+    }
+
+    for (var gy = 0; gy < h; gy += 23) {
+      ctx.beginPath();
+      ctx.moveTo(0, gy);
+      ctx.lineTo(w, gy);
+      ctx.stroke();
+    }
+
+    // Obstacle
+    var ox = w * .44;
+    var oy = h * .3;
+    var ow = w * .12;
+    var oh = h * .4;
+
+    ctx.fillStyle = '#1a3e5b';
+    ctx.strokeStyle = '#3e6985';
+    ctx.lineWidth = 1.4;
+
+    ctx.fillRect(ox, oy, ow, oh);
+    ctx.strokeRect(ox, oy, ow, oh);
+
+    // Destination
+    ctx.strokeStyle = 'rgba(86,224,209,.45)';
+    ctx.setLineDash([5, 5]);
+
+    ctx.strokeRect(
+      w * .81,
+      h * .15,
+      w * .1,
+      h * .7
+    );
+
+    ctx.setLineDash([]);
+
+    ctx.fillStyle = '#8ce9df';
+    ctx.font = '10px sans-serif';
+    ctx.fillText('DESTINATION', w * .77, h * .12);
+
+    // Pedestrian agents
+    for (var j = 0; j < agents.length; j++) {
+      var a = agents[j];
+
+      ctx.beginPath();
+      ctx.fillStyle = a.tint;
+      ctx.shadowColor = a.tint;
+      ctx.shadowBlur = 6;
+
+      ctx.arc(a.x, a.y, 2.7, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.shadowBlur = 0;
+    }
+  }
+
+  function tick() {
+    raf = 0;
+
+    if (!running || !visible || document.hidden) return;
+
+    frame++;
+
+    var ox = w * .44;
+    var oy = h * .3;
+    var ow = w * .12;
+    var oh = h * .4;
+
+    for (var i = 0; i < agents.length; i++) {
+      var a = agents[i];
+
+      var targetY = h * (.24 + (i % 9) * .065);
+      var targetX = w * .87;
+
+      // Illustrative obstacle avoidance
+      if (
+        a.x > ox - 17 &&
+        a.x < ox + ow + 10 &&
+        a.y > oy - 13 &&
+        a.y < oy + oh + 13
+      ) {
+        targetY = a.y < h * .5
+          ? oy - 16
+          : oy + oh + 16;
+      }
+
+      var dx = targetX - a.x;
+      var dy = targetY - a.y
+        + Math.sin(frame * .013 + a.phase) * 4;
+
+      var len = Math.sqrt(dx * dx + dy * dy) || 1;
+
+      a.x += a.speed * dx / len;
+      a.y += a.speed * dy / len;
+
+      // Restart agent after reaching destination
+      if (a.x > w * .89) {
+        a.x = 12 + rand() * 16;
+        a.y = 12 + rand() * (h - 24);
+      }
+    }
+
+    draw();
+    raf = requestAnimationFrame(tick);
+  }
+
+  function updateButton() {
+    toggle.textContent = running
+      ? 'Pause motion'
+      : 'Play motion';
+
+    toggle.setAttribute(
+      'aria-pressed',
+      String(!running)
+    );
+  }
+
+  toggle.addEventListener('click', function () {
+    running = !running;
+    updateButton();
+
+    if (running && !raf) {
+      raf = requestAnimationFrame(tick);
+    }
+  });
+
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      visible = !!entries[0].isIntersecting;
+
+      if (visible && running && !raf) {
+        raf = requestAnimationFrame(tick);
+      }
+    }, {
+      threshold: .05
+    });
+
+    io.observe(canvas);
+  }
+
+  document.addEventListener('visibilitychange', function () {
+    if (!document.hidden && visible && running && !raf) {
+      raf = requestAnimationFrame(tick);
+    }
+  });
+
+  if ('ResizeObserver' in window) {
+    new ResizeObserver(size).observe(canvas);
+  } else {
+    window.addEventListener('resize', size);
+  }
+
+  size();
+  updateButton();
+
+  if (running) {
+    raf = requestAnimationFrame(tick);
+  }
+})();
+</script>
