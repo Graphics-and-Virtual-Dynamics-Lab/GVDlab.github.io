@@ -1,31 +1,91 @@
-<div id="footer" class="panel">
-  <div class="panel-footer">
-	<div class="container-fluid">
-	  <div class="row">
-		<div class="col-sm-4">
+<footer id="footer" class="gvd-footer">
 
-		  <p>&copy 2025 Graphics and Virtual Dynamics (GVD) Lab. Site made with <a href="https://jekyllrb.com">Jekyll</a>. Template used from <a href="https://github.com/mpa139/allanlab/blob/gh-pages/_pages/aboutwebsite.md">Alan Lab Website</a>.</p>
-              
+  <div class="container-fluid">
 
+    <div class="gvd-footer-grid">
 
-		   <p>  </p><p>
+      <div class="gvd-footer-brand">
 
+        <div class="gvd-footer-heading">
+          Graphics &amp; Virtual Dynamics Lab
+        </div>
 
-		</div>
-		<div class="col-sm-4">
-		<p>We are part of the <a href="https://science.ontariotechu.ca/index.php">Faculty of Science</a> at the<a href="https://ontariotechu.ca/"> Ontario Tech University</a>.</p>
-		</div>
-		<div class="col-sm-4">
-		  Contact: GVD Lab<br />
-		  Science Building - U2063<br />		  
-		  2000 Simcoe Street North<br />
-		  Oshawa, ON, Canada <br />
-		  L1G 0C5 <br />
-		</div>
-	  </div>
-	</div>
+        <p>
+          Advancing human-centered simulation, immersive
+          technologies, and intelligent virtual environments.
+        </p>
+
+        <p>
+          Part of the
+          <a href="https://science.ontariotechu.ca/index.php">
+            Faculty of Science
+          </a>
+          at
+          <a href="https://ontariotechu.ca/">
+            Ontario Tech University
+          </a>.
+        </p>
+
+      </div>
+
+      <div>
+
+        <h3>Explore</h3>
+
+        <ul class="gvd-footer-links">
+          <li><a href="{{ '/' | relative_url }}">Home</a></li>
+          <li><a href="{{ '/research/' | relative_url }}">Research</a></li>
+          <li><a href="{{ '/team/' | relative_url }}">Our team</a></li>
+          <li><a href="{{ '/publications/' | relative_url }}">Publications</a></li>
+          <li><a href="{{ '/open-positions' | relative_url }}">Open positions</a></li>
+          <li><a href="{{ '/funding/' | relative_url }}">Funding support</a></li>
+        </ul>
+
+      </div>
+
+      <div>
+
+        <h3>Contact</h3>
+
+        <address>
+          GVD Lab<br>
+          Science Building - U2063<br>
+          2000 Simcoe Street North<br>
+          Oshawa, ON, Canada<br>
+          L1G 0C5
+        </address>
+
+        <a href="mailto:muhammad.usman8@ontariotechu.ca">
+          Email the lab &#8599;
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="gvd-footer-bottom">
+
+      <p>
+        &copy; {{ 'now' | date: "%Y" }}
+        Graphics and Virtual Dynamics (GVD) Lab.
+        All rights reserved.
+      </p>
+
+      <p>
+        Built with
+        <a href="https://jekyllrb.com">Jekyll</a>.
+        Original template adapted from the
+        <a href="https://github.com/mpa139/allanlab/blob/gh-pages/_pages/aboutwebsite.md">
+          Allan Lab website
+        </a>.
+      </p>
+
+    </div>
+
   </div>
-</div>
+
+</footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="{{ site.url }}{{ site.baseurl }}/js/bootstrap.min.js"></script>
+
+<script src="{{ '/js/bootstrap.min.js' | relative_url }}"></script>

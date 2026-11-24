@@ -1,23 +1,70 @@
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container-fluid">
-	<div class="navbar-header">
-	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
-		<span class="sr-only">Toggle navigation</span>
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-	  </button>
-	
-    <a class="navbar-brand" href="{{ site.url }}{{ site.baseurl }}/">GVD Lab @ Ontario Tech University</a>
-	</div>
-	<div class="collapse navbar-collapse" id="navbar-collapse-1">
-	  <ul class="nav navbar-nav navbar-right">
-		<li><a href="{{ site.url }}{{ site.baseurl }}/">Home</a></li>
-		<li><a href="{{ site.url }}{{ site.baseurl }}/team">Team</a></li>
-		<li><a href="{{ site.url }}{{ site.baseurl }}/open-positions">Open Positions</a></li>
-		<li><a href="{{ site.url }}{{ site.baseurl }}/publications">Publications</a></li>
-		<li><a href="{{ site.url }}{{ site.baseurl }}/funding">Funding Support</a></li>
-	  </ul>
-	</div>
+<nav class="navbar navbar-default navbar-fixed-top gvd-navbar" aria-label="Main navigation">
+  <div class="container-fluid gvd-nav-container">
+
+    <div class="navbar-header">
+
+      <button
+        type="button"
+        class="navbar-toggle collapsed"
+        data-toggle="collapse"
+        data-target="#navbar-collapse-1"
+        aria-expanded="false"
+        aria-controls="navbar-collapse-1">
+
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+
+      </button>
+
+      <a class="navbar-brand gvd-brand"
+         href="{{ '/' | relative_url }}">
+
+        <span class="gvd-brand-mark" aria-hidden="true">GVD</span>
+
+        <span class="gvd-brand-text">
+          <strong>GVD Lab</strong>
+          <small>Ontario Tech University</small>
+        </span>
+
+      </a>
+
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li{% if page.url == '/' %} class="active"{% endif %}>
+          <a href="{{ '/' | relative_url }}">Home</a>
+        </li>
+
+        <li{% if page.url contains '/research' %} class="active"{% endif %}>
+          <a href="{{ '/research/' | relative_url }}">Research</a>
+        </li>
+
+        <li{% if page.url contains '/team' %} class="active"{% endif %}>
+          <a href="{{ '/team/' | relative_url }}">Team</a>
+        </li>
+
+        <li{% if page.url contains '/publications' %} class="active"{% endif %}>
+          <a href="{{ '/publications/' | relative_url }}">Publications</a>
+        </li>
+
+        <li{% if page.url contains '/funding' %} class="active"{% endif %}>
+          <a href="{{ '/funding/' | relative_url }}">Funding</a>
+        </li>
+
+        <li class="gvd-nav-join{% if page.url contains '/open-positions' %} active{% endif %}">
+          <a href="{{ '/open-positions' | relative_url }}">
+            Join the lab &rarr;
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
   </div>
-</div>
+</nav>

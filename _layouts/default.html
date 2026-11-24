@@ -1,16 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
   {% include head.html %}
 
   <body>
 
+    <a class="gvd-skip-link" href="#gvd-main-content">
+      Skip to main content
+    </a>
+
     {% include header.html %}
 
-    <div class="container-fluid">
-      <div class="row">
+    <div id="gvd-main-content"
+         class="container-fluid gvd-site-content">
+
+      <div class="row gvd-content-row">
+
         {{ content }}
+
       </div>
+
     </div>
 
     {% include footer.html %}
