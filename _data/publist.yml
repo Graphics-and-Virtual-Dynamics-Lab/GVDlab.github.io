@@ -1,3 +1,30 @@
+- title: "Realistic Trail Following Behavior in a Dynamically Deformable Terrain Using Terrain-Based Penalty Fields"
+  image: image.png
+  description: ""
+  authors: "Noor, Hamza and Usman, Muhammad"
+  link:
+    url: "https://doi.org/10.1002/cav.70149"
+    display: "Computer Animation and Virtual Worlds, 37(3), e70149 (2026)"
+  highlight: 1
+
+- title: "From Satellite to Street: A Hybrid Framework Integrating Stable Diffusion and PanoGAN for Consistent Cross-View Synthesis"
+  image: image.png
+  description: ""
+  authors: "Bajbaa, Khawlah, Anwar, Abbas, Saqib, Muhammad, Anwar, Hafeez, Sharma, Nabin, Usman, Muhammad"
+  link:
+    url: "https://doi.org/10.1007/s10707-026-00575-1"
+    display: "GeoInformatica, 30(1), 17 (2026)"
+  highlight: 0
+
+- title: "Digital twin-based evaluation of tactical interventions for high-density pedestrian environments"
+  image: image.png
+  description: ""
+  authors: "Yang, S, Usman, M, Hassan, A, Sohn, G, Faloutsos, P, Haworth, B"
+  link:
+    url: "https://doi.org/10.1080/10095020.2025.2600195"
+    display: "Geo-spatial Information Science, 29(4), 2868-2886 (2026; online 2025)"
+  highlight: 0
+
 - title: "Cardiverse: Harnessing LLMs for Novel Card Game Prototyping"
   image: Cardiverse2025.png
   description: ""
@@ -49,7 +76,7 @@
   authors: Rahman, ABM, Anwar, Saeed, Usman, Muhammad, Mian, Ajmal
   link:
     url: "https://arxiv.org/abs/2406.09155"
-    display: "arXiv preprint arXiv:2406.09155, nan(nan), nan (2024)"
+    display: "arXiv preprint arXiv:2406.09155, (2024)"
   highlight: 0
 
 - title: "Selective Multi-View Deep Model for 3D Object Classification"
@@ -103,7 +130,7 @@
   authors: Usman, Muhammad, Usmani, Aman, Jadidi, Mojgan
   link:
     url: "https://ixdea.org/58_3/"
-    display: "Interaction Design &amp; Architecture (s)--IxD&amp;A Journal, nan(58), 72--89 (2023)"
+    display: "Interaction Design & Architecture (s)--IxD&A Journal, 58, 72--89 (2023)"
   highlight: 1
 
 - title: "Digital Twins: Simulating Robot-Human Sidewalk Interactions"
@@ -139,7 +166,7 @@
   authors: Tennakoon, Damith, Usmani, Aman U, Vasileiou, Apostolos, Latchaev, Sasha, Baljko, Melanie, Usman, Muhammad, Khan, Usman, Perras, Matthew, Jadidi, Mojgan
   link:
     url: "https://peer.asee.org/teaching-earth-systems-beyond-the-classroom-developing-a-mixed-reality-xr-sandbox"
-    display: "ASEE Annual Conference &amp; Exposition, (2022)"
+    display: "ASEE Annual Conference & Exposition, (2022)"
   highlight: 0
 
 - title: "Impact of Manikin Display on Perception of Spatial Planning"
@@ -166,7 +193,7 @@
   authors: Sohn, Samuel S, Lee, Mihee, Moon, Seonghyeon, Qiao, Gang, Usman, Muhammad, Yoon, Sejong, Pavlovic, Vladimir, Kapadia, Mubbasir
   link:
     url: "https://www.sciencedirect.com/science/article/pii/S0097849322000826"
-    display: "Computers &amp; Graphics, 106(nan), 130--140 (2022)"
+    display: "Computers & Graphics, 106, 130--140 (2022)"
   highlight: 0
 
 - title: "A2x: An agent and environment interaction benchmark for multimodal human trajectory prediction"
@@ -175,7 +202,7 @@
   authors: Sohn, Samuel S, Lee, Mihee, Moon, Seonghyeon, Qiao, Gang, Usman, Muhammad, Yoon, Sejong, Pavlovic, Vladimir, Kapadia, Mubbasir
   link:
     url: "https://dl.acm.org/doi/abs/10.1145/3487983.3488302"
-    display: "Computers &amp; Graphics, 1--9 (2021)"
+    display: "Computers & Graphics, 1--9 (2021)"
   highlight: 0
 
 - title: "Web-based Game vs. Virtual Reality Field Surveying Labs Towards Enhancing Experiential Education"
@@ -283,7 +310,7 @@
   authors: Schaumann, Davide, Sohn, Samuel S, Usman, Muhammad, Haworth, Brandon, Faloutsos, Petros, Kapadia, Mubbasir
   link:
     url: "https://bibbase.org/service/mendeley/cf9fe2ca-3ff4-3e96-b130-09221d607300/file/46672b20-47c1-ccb1-0447-275316adfc63/cf2019_047.pdf.pdf"
-    display: "International Conference on Computer-Aided Architectural Design Futures, 18(00000), nan (2019)"
+    display: "International Conference on Computer-Aided Architectural Design Futures, (2019)"
   highlight: 0
 
 - title: "Toward a multi-level and multi-paradigm platform for building occupant simulation"
@@ -334,7 +361,7 @@
 - title: "Evaluating and optimizing evacuation plans for crowd egress"
   image: image.png
   description: ""
-  authors: Cassol, Vincius J, Testa, Est{\^e}v{\~a}o Smania, Jung, Cl{\'a}udio Rosito, Usman, Muhammad, Faloutsos, Petros, Berseth, Glen, Kapadia, Mubbasir, Badler, Norman I, Musse, Soraia Raupp
+  authors: Cassol, Vincius J, Testa, Estêvão Smania, Jung, Cláudio Rosito, Usman, Muhammad, Faloutsos, Petros, Berseth, Glen, Kapadia, Mubbasir, Badler, Norman I, Musse, Soraia Raupp
   link:
     url: "https://ieeexplore.ieee.org/abstract/document/8013477"
     display: "IEEE computer graphics and applications, 37(4), 60--71 (2017)"
@@ -411,4 +438,3 @@
     url: "https://onlinelibrary.wiley.com/doi/full/10.1002/cav.1652"
     display: "Computer Animation and Virtual Worlds, 26(3-4), 377--386 (2015)"
   highlight: 0
-  

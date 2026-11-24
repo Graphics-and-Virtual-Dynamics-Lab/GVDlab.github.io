@@ -1,11 +1,147 @@
+<style>
+.gvd-news-feed {
+  width: 100%;
+  min-width: 0;
+}
 
-<div class="well">
-<h4>News</h4>
+.gvd-news-feed .gvd-news-item {
+  padding: 24px 0;
+  border-bottom: 1px solid #dfe8f0;
+  overflow-wrap: anywhere;
+}
 
-{% for article in site.data.news limit:9 %}
-<p>{{ article.date }}<br>{{ article.headline | markdownify}}</p>
-{% endfor %}
+.gvd-news-feed .gvd-news-item:first-child {
+  background: linear-gradient(135deg, #f0faf9, #f6f9fd);
+  border: 1px solid #c6e6e4;
+  border-left: 4px solid #159b98;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 6px;
+}
 
-<h4><a href="{{ site.url }}{{ site.baseurl }}/allnews.html">... see all News</a></h4>
+.gvd-news-feed .gvd-news-date {
+  display: block;
+  color: #527287;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  margin-bottom: 12px;
+}
 
+.gvd-news-feed .gvd-news-content {
+  color: #192c46;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.gvd-news-feed .gvd-news-content p {
+  margin: 0 0 12px;
+}
+
+.gvd-news-feed .gvd-news-content p:last-child {
+  margin-bottom: 0;
+}
+
+.gvd-news-feed .gvd-news-content strong {
+  color: #102441;
+}
+
+.gvd-news-feed .gvd-news-content a {
+  color: #087e88;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.gvd-news-feed .gvd-news-content a:hover {
+  text-decoration: underline;
+}
+
+.gvd-news-feed .gvd-news-featured {
+  display: inline-block;
+  background: #d7f3ef;
+  color: #086c73;
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.gvd-news-feed .gvd-all-news {
+  display: inline-block;
+  background: #102441;
+  color: #ffffff;
+  border-radius: 9px;
+  padding: 12px 20px;
+  margin-top: 22px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background .2s ease;
+}
+
+.gvd-news-feed .gvd-all-news:hover {
+  background: #146173;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  .gvd-news-feed .gvd-news-item {
+    padding: 20px 0;
+  }
+
+  .gvd-news-feed .gvd-news-item:first-child {
+    padding: 16px;
+  }
+
+  .gvd-news-feed .gvd-news-content {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .gvd-news-feed .gvd-all-news {
+    display: block;
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gvd-news-feed .gvd-all-news {
+    transition: none;
+  }
+}
+</style>
+
+<div class="gvd-news-feed">
+
+  {% for article in site.data.news limit:9 %}
+
+  <article class="gvd-news-item">
+
+    {% if forloop.first %}
+    <span class="gvd-news-featured">
+      Latest announcement
+    </span>
+    {% endif %}
+
+    <time class="gvd-news-date">
+      {{ article.date }}
+    </time>
+
+    <div class="gvd-news-content">
+      {{ article.headline | markdownify }}
     </div>
+
+  </article>
+
+  {% endfor %}
+
+  <a class="gvd-all-news"
+     href="{{ '/allnews.html' | relative_url }}">
+    View all news &rarr;
+  </a>
+
+</div>
