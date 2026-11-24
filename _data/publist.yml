@@ -1,6 +1,34 @@
-- title: "Realistic Trail Following Behavior in a Dynamically Deformable Terrain Using Terrain-Based Penalty Fields"
+
+- title: "Exploring 3D point clouds with multimodal large language model (MLLM): A review"
   image: image.png
   description: ""
+  authors: "Alissa, Sarah, Usman, Muhammad, Khan, Fakhri Alam"
+  link:
+    url: "https://doi.org/10.1016/j.imavis.2026.106202"
+    display: "Image and Vision Computing, 175, 106202 (2026)"
+  highlight: 0
+
+- title: "UBLLIE: Unified Backlight and Low-Light Image Enhancement"
+  image: image.png
+  description: ""
+  authors: "Yasin, Yasmin, Usman, Muhammad, Radwan, Ibrahim, Anwar, Saeed"
+  link:
+    url: "https://arxiv.org/abs/2608.04429"
+    display: "arXiv preprint arXiv:2608.04429 (2026)"
+  highlight: 0
+
+- title: "Digital twin-based evaluation of tactical interventions for high-density pedestrian environments"
+  image: image.png
+  description: ""
+  authors: "Yang, Seungho, Usman, Muhammad, Hassan, Ali, Sohn, Gunho, Faloutsos, Petros, Haworth, Brandon"
+  link:
+    url: "https://doi.org/10.1080/10095020.2025.2600195"
+    display: "Geo-spatial Information Science, 29(4), 2868-2886 (2026)"
+  highlight: 0
+
+- title: "Realistic Trail Following Behavior in a Dynamically Deformable Terrain Using Terrain-Based Penalty Fields"
+  image: image.png
+  description: "Best Paper Award at the 39th International Conference on Computer Animation, Social Agents, and Extended Reality (CASAXR 2026), Geneva, Switzerland."
   authors: "Noor, Hamza and Usman, Muhammad"
   link:
     url: "https://doi.org/10.1002/cav.70149"
@@ -13,34 +41,79 @@
   authors: "Bajbaa, Khawlah, Anwar, Abbas, Saqib, Muhammad, Anwar, Hafeez, Sharma, Nabin, Usman, Muhammad"
   link:
     url: "https://doi.org/10.1007/s10707-026-00575-1"
-    display: "GeoInformatica, 30(1), 17 (2026)"
+    display: "GeoInformatica, 30, Article 17 (2026)"
   highlight: 0
 
-- title: "Digital twin-based evaluation of tactical interventions for high-density pedestrian environments"
+- title: "Selective multi-view deep model for 3D object classification"
   image: image.png
   description: ""
-  authors: "Yang, S, Usman, M, Hassan, A, Sohn, G, Faloutsos, P, Haworth, B"
+  authors: "Alzahrani, Mona, Usman, Muhammad, Anwar, Saeed, El-Bassuny, Tarek"
   link:
-    url: "https://doi.org/10.1080/10095020.2025.2600195"
-    display: "Geo-spatial Information Science, 29(4), 2868-2886 (2026; online 2025)"
+    url: "https://patents.google.com/patent/US20260087776A1/en"
+    display: "US Patent Application 18/891,586, Publication US20260087776A1 (2026)"
+  highlight: 0
+
+- title: "PENDULUM: A Benchmark for Assessing Sycophancy in Multimodal Large Language Models"
+  image: image.png
+  description: ""
+  authors: "Rahman, Ashikur, Anwar, Saeed, Usman, Muhammad, Ahmad, Irfan, Mian, Ajmal"
+  link:
+    url: "https://arxiv.org/abs/2512.19350"
+    display: "arXiv preprint arXiv:2512.19350 (2025)"
+  highlight: 0
+
+- title: "MSRNet: A Multi-Scale Recursive Network for Camouflaged Object Detection"
+  image: image.png
+  description: ""
+  authors: "Alghamdi, Leena, Usman, Muhammad, Anwar, Hafeez, Bais, Abdul, Anwar, Saeed"
+  link:
+    url: "https://arxiv.org/abs/2511.12810"
+    display: "arXiv preprint arXiv:2511.12810 (2025)"
   highlight: 0
 
 - title: "Cardiverse: Harnessing LLMs for Novel Card Game Prototyping"
   image: Cardiverse2025.png
-  description: ""
-  authors: Li, Danrui, Zhang, Sen, Sohn, Sam S, Hu, Kaidong, Usman, Muhammad, Kapadia, Mubbasir
+  description: "SAC Highlight Award at EMNLP 2025."
+  authors: "Li, Danrui, Zhang, Sen, Sohn, Samuel S., Hu, Kaidong, Usman, Muhammad, Kapadia, Mubbasir"
   link:
-    url: "https://arxiv.org/abs/2502.07128"
-    display: "arXiv preprint arXiv:2502.07128, (2025)"
+    url: "https://aclanthology.org/2025.emnlp-main.1511/"
+    display: "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing, 29735-29762 (2025)"
   highlight: 1
+
+- title: "DefAn: Definitive Answer Dataset for LLM Hallucination Evaluation"
+  image: image.png
+  description: ""
+  authors: "Rahman, A. B. M. Ashikur, Anwar, Saeed, Usman, Muhammad, Ahmad, Irfan, Mian, Ajmal"
+  link:
+    url: "https://doi.org/10.3390/info16110937"
+    display: "Information, 16(11), 937 (2025)"
+  highlight: 0
+
+- title: "Bird eye-view to street-view: A survey"
+  image: image.png
+  description: ""
+  authors: "Bajbaa, Khawlah, Usman, Muhammad, Anwar, Saeed, Radwan, Ibrahim, Bais, Abdul"
+  link:
+    url: "https://doi.org/10.1007/s10489-025-06940-1"
+    display: "Applied Intelligence, 55(16), Article 1050 (2025)"
+  highlight: 0
+
+- title: "Generation and Evaluation of Synthetic Low-Magnitude Earthquake Data Using Auxiliary Classifier GAN"
+  image: image.png
+  description: ""
+  authors: "Alsulami, A., Al-Qadasi, B., Usman, Muhammad, Waheed, Umair Bin"
+  link:
+    url: "https://doi.org/10.1029/2024EA004064"
+    display: "Earth and Space Science, 12(10), e2024EA004064 (2025)"
+  highlight: 0
 
 - title: "A comprehensive overview of large language models"
   image: LLMs2025.png
   description: ""
   authors: Naveed, Humza, Khan, Asad Ullah, Qiu, Shi, Saqib, Muhammad, Anwar, Saeed, Usman, Muhammad, Akhtar, Naveed, Barnes, Nick, Mian, Ajmal
   link:
-    url: "https://dl.acm.org/doi/abs/10.1145/3744746"
-    display: "ACM Transactions on Intelligent Systems and Technology, (2025)"
+    url: "https://dl.acm.org/doi/10.1145/3744746"
+    display: "ACM Transactions on Intelligent Systems and Technology, 16(5), 1-72 (2025)"
   highlight: 1
 
 - title: "3D Object Classification with Selective Multi-View Fusion and Shape Rendering"
@@ -70,13 +143,13 @@
     display: "International Conference on Image Processing (ICIP), 1260--1266 (2024)"
   highlight: 0
 
-- title: "DefAn: Definitive Answer Dataset for LLMs Hallucination Evaluation"
+- title: "Deep models for multi-view 3D object recognition: a review"
   image: image.png
   description: ""
-  authors: Rahman, ABM, Anwar, Saeed, Usman, Muhammad, Mian, Ajmal
+  authors: Alzahrani, Mona, Usman, Muhammad, Jarraya, Salma Kammoun, Anwar, Saeed, Helmy, Tarek
   link:
-    url: "https://arxiv.org/abs/2406.09155"
-    display: "arXiv preprint arXiv:2406.09155, (2024)"
+    url: "https://link.springer.com/article/10.1007/s10462-024-10941-w"
+    display: "Artificial Intelligence Review, 57(12), 323 (2024)"
   highlight: 0
 
 - title: "Selective Multi-View Deep Model for 3D Object Classification"
@@ -86,24 +159,6 @@
   link:
     url: "https://openaccess.thecvf.com/content/CVPR2024W/3DMV/html/Alzahrani_Selective_Multi-View_Deep_Model_for_3D_Object_Classification_CVPRW_2024_paper.html"
     display: "Conference on Computer Vision and Pattern Recognition, 728--736 (2024)"
-  highlight: 0
-
-- title: "Bird's-Eye View to Street-View: A Survey"
-  image: image.png
-  description: ""
-  authors: Bajbaa, Khawlah, Usman, Muhammad, Anwar, Saeed, Radwan, Ibrahim, Bais, Abdul
-  link:
-    url: "https://arxiv.org/abs/2405.08961"
-    display: "arXiv preprint arXiv:2405.08961, (2024)"
-  highlight: 0
-
-- title: "Deep models for multi-view 3D object recognition: a review"
-  image: image.png
-  description: ""
-  authors: Alzahrani, Mona, Usman, Muhammad, Jarraya, Salma Kammoun, Anwar, Saeed, Helmy, Tarek
-  link:
-    url: "https://link.springer.com/article/10.1007/s10462-024-10941-w"
-    display: "Artificial Intelligence Review, 57(12), 323 (2024)"
   highlight: 0
 
 - title: "The role of latent representations for design space exploration of floorplans"
